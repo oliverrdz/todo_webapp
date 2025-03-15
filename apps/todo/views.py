@@ -3,11 +3,19 @@ from django.http import HttpResponse
 from django.contrib import messages
 
 from .forms import *
+from .models import *
 
 # Create your views here.
 
 def home(request):
-    return HttpResponse('Todo home')
+    return render(request, 'todo/index.html')
+
+def list_todo(request):
+    todos = Todo.objects.all().order_by('-date').all()
+    context = {
+        'todos': todos,
+    }
+    return render(request, 'todo/list_todo.html', context)
 
 def new_todo(request):
     if request.method == 'POST':
