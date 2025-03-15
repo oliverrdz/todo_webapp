@@ -9,3 +9,13 @@ I want to practice using the Django framework. For that I will be creating sever
 * RSS reader
 
 I will record my progress in my website.
+
+## Pending
+* Implement change status of todo item
+
+## Changelog
+2025/March/15:
+* Started project
+* Created todo app
+* Created model for a single todo list
+* Implemented form and list for todo list
