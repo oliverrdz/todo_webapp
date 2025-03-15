@@ -1,25 +1,11 @@
-# To do app
+# Web apps
 
-## Objective 
+I want to practice using the Django framework. For that I will be creating several web applications that I think would be useful for myself. So far this is what I would like to build:
 
-Use Django to create a to do app with the following requirements:
-* Create different lists
-* Use Django authentication
+* Todo app
+* Bookmarks
+* Money tracker
+* Goal tracker
+* RSS reader
 
-## Model
-
-* Lists
-    * list_name
-    * user
-
-* Note
-    * list_name
-    * note
-    * toggle
-
-## Forms
-
-* New list
-* New note
-* New user
-* Log in
+I will record my progress in my website.
