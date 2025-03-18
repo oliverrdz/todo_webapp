@@ -1,0 +1,26 @@
+{% extends "home/base.html" %}
+
+{% block page_title %}Edit item{% endblock %}
+
+{% block content %}
+
+<h1>Edit item</h1>
+
+{% if messages %}
+<ul>
+    {% for x in messages %}
+    <li>{{ x }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <table class="table">
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="Update"/>
+</form>
+
+
+{% endblock %}

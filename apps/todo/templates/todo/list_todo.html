@@ -15,7 +15,7 @@
         </tr>
         {% for x in todos %}
             <tr>
-                <td><a href="">Edit</a></td>
+                <td><a href="/todo/edit/{{ x.id }}">Edit</a></td>
                 <td>{{ x.done }}</td>
                 <td>{{ x.date }}</td>
                 <td>{{ x.deadline }}</td>
