@@ -1,17 +1,23 @@
-<h1>New todo form</h1>
+{% extends "home/base.html" %}
 
-{% if messages %}
-    <ul>
-        {% for x in messages %}
-            <li>{{ x }}</li>
-        {% endfor %}
-    </ul>
-{% endif %}
+{% block page_title %}New todo item{% endblock %}
 
-<form action="" method="POST">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-    </table>
-    <input type="submit" value="Add"/>
-</form>
+{% block content %}
+    <h1>New todo item</h1>
+
+    {% if messages %}
+        <ul>
+            {% for x in messages %}
+                <li>{{ x }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table class="table">
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="Add"/>
+    </form>
+{% endblock %}

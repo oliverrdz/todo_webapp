@@ -1,18 +1,27 @@
-<h1>List of todos</h1>
+{% extends "home/base.html" %}
 
-<table>
-    <tr>
-        <th>Date added</th>
-        <th>Deadline</th>
-        <th>Status</th>
-        <th>Text</th>
-    </tr>
-    {% for x in todos %}
+{% block page_title %}List of items{% endblock %}
+
+{% block content %}
+    <h1>List of items</h1>
+
+    <table class="table">
         <tr>
-            <td>{{ x.date }}</td>
-            <td>{{ x.deadline }}</td>
-            <td>{{ x.done }}</td>
-            <td>{{ x.text }}</td>
+            <th></th>
+            <th>Status</th>
+            <th>Date added</th>
+            <th>Deadline</th>
+            <th>Text</th>
         </tr>
-    {% endfor %}
-</table>
+        {% for x in todos %}
+            <tr>
+                <td><a href="">Edit</a></td>
+                <td>{{ x.done }}</td>
+                <td>{{ x.date }}</td>
+                <td>{{ x.deadline }}</td>
+                <td>{{ x.text }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
